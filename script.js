@@ -40,7 +40,7 @@ if(target && target.classList.contains('info-header-tab')){
    
 // timer
 
-let deadLine = '2019-10-12'
+let deadLine = '2019-12-12'
 
 function getTimeRemaining(endtime){
     let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -93,5 +93,37 @@ if(t.total <= 0){
 
 }
 setClock('timer' , deadLine)
+
+// modal
+
+let more = document.querySelector('.more'),
+    overlay = document.querySelector('.overlay'),
+      close = document.querySelector('.popup-close')
+
+      more.addEventListener('click' , function(){
+          overlay.style.display = 'block'
+          this.classList.add('more-splash')
+          document.body.style.overflow = 'hidden'
+      })
+
+      close.addEventListener('click', function() {
+        overlay.style.display = 'none'
+        more.classList.remove('more-splash')
+        document.body.style.overflow = ''
+      })
+
+
+let descriptionBtn = document.querySelectorAll('.description-btn')
+
+
+
+descriptionBtn.forEach(descriptionBtn => {
+    descriptionBtn.addEventListener('click', function(){
+        overlay.style.display = 'block'
+        this.classList.add('more-splash')
+        document.body.style.overflow = 'hidden'
+    })
+})
+
 })
 
