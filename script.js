@@ -40,7 +40,7 @@ if(target && target.classList.contains('info-header-tab')){
    
 // timer
 
-let deadLine = '2019-12-12'
+let deadLine = '2019-12-31'
 
 function getTimeRemaining(endtime){
     let t = Date.parse(endtime) - Date.parse(new Date()),
