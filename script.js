@@ -136,7 +136,7 @@ let message = {
 
 let form = document.querySelector('.main-form'),
     formModal = document.getElementById('form'),
-    input = form.getElementsByTagName('input'),
+    input = document.getElementsByTagName('input'),
     statusMessage = document.createElement('div')
 
     statusMessage.classList.add('status')
